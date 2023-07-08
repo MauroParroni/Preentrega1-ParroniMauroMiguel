@@ -8,6 +8,7 @@ function App() {
       <NavBar/>
       <ItemList prop="¡Hola, bienvenido a Vapor Verde!" />
     </div>
+    
   );
 }
 
