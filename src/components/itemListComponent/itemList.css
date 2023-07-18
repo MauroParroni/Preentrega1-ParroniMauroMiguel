@@ -1,6 +1,5 @@
-.estiloContenedor  {
-    padding: 20px;
-    text-align: center;
-    color: white;
-  };
-  
+.estiloContenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,50 @@
+.item {
+
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item h1 {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .item p {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .item button {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0077bb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item button:hover {
+    background-color: #005fa3;
+  }
