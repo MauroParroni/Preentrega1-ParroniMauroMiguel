@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import "./itemList.css"
-import ItemCount from './itemCountComponent/itemCountComponent';
 import ItemComponent from './itemComponent/item';
-import getData from '../../services/asyncMock';
+import getData, { getCategoryData } from '../../services/asyncMock';
+import ItemDetailComponent from '../itemDetailContainer/itemDetailContainer';
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = ({ prop }) => {
   const [videojuegos, setVideojuegos] = useState([]);
+  const {categoryId}= useParams();
   async function getProductList(){
-     const resp = await getData();
+   let resp = categoryId? await getCategoryData(categoryId) : await getData();
      setVideojuegos(resp);
   }
   useEffect(() =>{
     getProductList();
-  },[])
+  },[categoryId])
   return (
     <div className='estiloContenedor'>
       <h2 className='greetingStyles'>{prop}</h2>
       <div>
-      {videojuegos.map((juego) => <ItemComponent key= {juego.id}{...juego}/>)}
+      {videojuegos.map((juego) => <ItemComponent key= {juego.id}{...juego}/>)}  
       </div>
-
     </div>
    
   );

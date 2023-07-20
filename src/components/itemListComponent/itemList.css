@@ -1,5 +1,7 @@
 .estiloContenedor {
-  display: flex;
-  flex-wrap: wrap;
+ display: block;
   justify-content: center;
+}
+.estiloContenedor h2{
+  color: aliceblue !important;
 }

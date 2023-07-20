@@ -22,7 +22,7 @@ function ItemCountComponent({props}) {
       <button className="item-count-button" onClick={handleClickSub}>
         -
       </button>
-      <p className="count-text">{clickCount}</p>
+      <h2 className="count-text">{clickCount}</h2>
       <button className="item-count-button" onClick={handleClickAdd}>
         +
       </button>
