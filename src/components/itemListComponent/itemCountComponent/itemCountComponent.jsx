@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./itemCountComponent.css";
 
-function ItemCountComponent({props}) {
-  const [clickCount, setClickCount] = useState(0);
+function ItemCountComponent({stock}) {
+  const [clickCount, setClickCount] = useState(1);
 
   function handleClickAdd() {
-    if (clickCount == props) {
+    if (clickCount == stock) {
     }else{
    setClickCount(clickCount + 1);
     }
