@@ -5,3 +5,14 @@
 .estiloContenedor h2{
   color: aliceblue !important;
 }
+.itemList{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

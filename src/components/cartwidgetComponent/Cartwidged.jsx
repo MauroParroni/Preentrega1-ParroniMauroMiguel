@@ -1,16 +1,18 @@
+
+import React, { useContext } from 'react';
 import "./carrito.css";
 import logoCarrito from "./descarga.png";
-const carrito = logoCarrito;
-
-export const carro = () => {
+import { cartContext } from '../../context/cartContext';
+import { getTotalItemsInCart } from '../../context/cartContext';
+const Carro = () => {
+    const context = useContext(cartContext);
+    const { get } = context;
     return (
         <div>
-        <img src={carrito}  width="55"
-        height="30"
-        className="d-inline-block align-top"
-        alt="Carrito" />
-        <small className="xd">1</small>
+            <img src={logoCarrito} width="55" height="30" className="d-inline-block align-top" alt="Carrito" />
+            <small className="xd">{context.getTotalItemsInCart()}</small>
         </div>
     );
 }
-export default carro;
+
+export default Carro;

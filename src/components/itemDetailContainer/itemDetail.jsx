@@ -1,8 +1,8 @@
-import { Image } from "react-bootstrap";
+import { Image} from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import ItemCountComponent from "../itemListComponent/itemCountComponent/itemCountComponent";
-function itemDetail({product}){
-    const requisitosExisten =
-    product?.requisitos && Array.isArray(product.requisitos);
+import Button from 'react-bootstrap/Button';
+function itemDetail({product, addToCart, addedToCart}){
     return(
 <div className="item-detail">
       <h2>{product.nombre}</h2>
@@ -19,17 +19,24 @@ function itemDetail({product}){
         <p>{product.info}</p>
         <h3>Categoría: {product.categoria}</h3>
         <h3>Precio: ${product.precio}</h3>
-        <ItemCountComponent stock={product.stock} />
+        {addedToCart ? (
+           <div>
+           <LinkContainer to="/cart">
+           <Button  variant="info" className="buttons">Ir Al Carrito</Button>
+         </LinkContainer>
+         <LinkContainer to="/">
+         <Button  variant="success" className="buttons">Volver Al Inicio</Button>
+       </LinkContainer>
+       </div>
+        ) : (
+          <ItemCountComponent onAddToCart={addToCart} stock={product.stock} />
+        )}
         <h3>Requisitos:</h3>
-        {requisitosExisten ? (
           <ul>
             {product.requisitos.map((req, index) => (
               <li key={index}>{req}</li>
             ))}
-          </ul>
-        ) : (
-          <p>No se encontraron requisitos para este producto.</p>
-        )}
+          </ul>       
       </div>
     </div>
 

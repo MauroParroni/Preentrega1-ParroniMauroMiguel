@@ -1,6 +1,5 @@
 import React from "react";
 import "./item.css" ;
-import ItemCountComponent from "../itemCountComponent/itemCountComponent";
 import { Link } from "react-router-dom";
 
 function Item (props) {

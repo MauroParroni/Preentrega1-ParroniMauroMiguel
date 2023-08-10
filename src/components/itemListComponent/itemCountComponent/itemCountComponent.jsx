@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./itemCountComponent.css";
-
-function ItemCountComponent({stock}) {
+function ItemCountComponent({stock,onAddToCart }) {
   const [clickCount, setClickCount] = useState(1);
 
   function handleClickAdd() {
-    if (clickCount == stock) {
+    if (clickCount === stock) {
     }else{
    setClickCount(clickCount + 1);
     }
@@ -16,6 +15,7 @@ function ItemCountComponent({stock}) {
       setClickCount(clickCount - 1);
     }
   }
+ 
 
   return (
     <div className="item-count-container">
@@ -26,7 +26,7 @@ function ItemCountComponent({stock}) {
       <button className="item-count-button" onClick={handleClickAdd}>
         +
       </button>
-      <button className="item-count-button add-to-cart-button">
+      <button className="item-count-button add-to-cart-button" onClick={ (evt) =>{onAddToCart(clickCount, evt)} }>
         <h4>Añadir al carrito</h4>
       </button>
     </div>

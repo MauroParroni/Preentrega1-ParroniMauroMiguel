@@ -57,7 +57,7 @@ const AppNavbar = () => {
           </LinkContainer>
         </Nav>
         <Nav className="ml-auto carrito">
-          <LinkContainer to="/carrito">
+          <LinkContainer to="/cart">
             <Nav.Link className="ml-auto">
               <Carro />
             </Nav.Link>
