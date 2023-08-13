@@ -20,5 +20,5 @@
   .count-text {
     font-size: 1.5rem;
     margin: 0 0.5rem;
-    color: black;
+    color: black !important;
   }

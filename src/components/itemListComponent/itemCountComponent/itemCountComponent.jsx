@@ -22,7 +22,7 @@ function ItemCountComponent({stock,onAddToCart }) {
       <button className="item-count-button" onClick={handleClickSub}>
         -
       </button>
-      <h2 className="count-text">{clickCount}</h2>
+      <h3 className="count-text">{clickCount}</h3>
       <button className="item-count-button" onClick={handleClickAdd}>
         +
       </button>

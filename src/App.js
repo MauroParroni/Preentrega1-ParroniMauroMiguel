@@ -6,6 +6,7 @@ import ItemDetailComponent from "./components/itemDetailContainer/itemDetailCont
 import CartContainer from "./components/cartContainer/cartContainer";
 import OrderConfirm from "./orderConfirm/orderConfirm";
 import { CartContextProvider } from "./context/cartContext";
+import CheckoutComponent from "./components/checkoutComponent/checkoutComponent";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/product/:id" element={<ItemDetailComponent />}/>
         <Route path="/cart" element={<CartContainer />}/>
         <Route path="/order-confirmation/:id" element={<OrderConfirm />}/>
+        <Route path="/checkout" element={<CheckoutComponent />}/>
         </Routes>
       </div>
     </BrowserRouter>

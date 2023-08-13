@@ -10,34 +10,11 @@ import { createOrder } from "../../services/firebase";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
+
 const MySwal = withReactContent(Swal)
 function CartContainer() {
     const { cart, removeItem } = useContext(cartContext);
-    const navigate = useNavigate();
-    const calculateTotal = () => {
-        let total = 0;
-        cart.forEach(item => {
-            total += item.precio * item.count;
-        });
-        return total;
-    };
-   
-    async function handleCheckout() {
-        const orderItems = cart.map(item => ({ ...item }));
-        const orderData ={
-            items : orderItems,
-            buyer: {name: "Mauro", email: "mauro@gmail.com", phone: "123321"},
-            date: new Date(),
-            total: calculateTotal()
-        }
-        try {
-        const idOrder = await createOrder(orderData)
-        MySwal.fire(`Gracias por su compra tu numero de orden es ${idOrder}`)
-        navigate (`/order-confirmation/${idOrder}`)
-    } catch(error){
-        MySwal.fire(`No se pudo realizar la compra ${error.message}`)
-    }
-     }
+
     if (cart.length === 0) {
         return (
             <div className="no-products">
@@ -83,8 +60,12 @@ function CartContainer() {
                 </tbody>
             </Table>
             <div className="total-container">
-                <p>Total: ${calculateTotal()}</p>
-                <Button  variant="success" className="buttons" onClick={handleCheckout}>Comprar</Button>
+                <p>Total:</p>
+                <LinkContainer to="/checkout">
+        <Button variant="primary" type="submit">
+      Comprar
+      </Button>
+          </LinkContainer>
             </div>
         </div>
     );

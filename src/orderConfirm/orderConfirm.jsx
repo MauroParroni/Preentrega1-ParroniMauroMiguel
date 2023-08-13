@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { getOrder } from "../services/firebase";
 import { LinkContainer } from "react-router-bootstrap";
 import { Button, Table } from "react-bootstrap";
 import "./orderConfirm.css"
+import { cartContext } from "../context/cartContext";
 
 function OrderConfirm() {
+  const {  cart, clearCart } = useContext(cartContext);
   const [orderData, setOrderdata] = useState(null);
   const { id } = useParams();
-
+  const calculateTotal = () => {
+    let total = 0;
+    cart.forEach(item => {
+        total += item.precio * item.count;
+    });
+    return total;
+}; 
   useEffect(() => {
     getOrder(id).then((order) => {
       console.log(order);
@@ -16,7 +24,7 @@ function OrderConfirm() {
     });
   }, []);
 
-  return (
+  return ( 
     <div className="order-confirm-container">
       <h1 className="order-confirm-header">GRACIAS POR TU COMPRA</h1>
       {orderData ? (
@@ -41,9 +49,10 @@ function OrderConfirm() {
                 ))}
               </tbody>
             </Table>
+            <h3 style={{color:"white"}}>Total: {calculateTotal()}$</h3>
           </div>
           <LinkContainer to="/">
-            <Button variant="success" className="buttons">
+            <Button variant="success" className="buttons" onClick={clearCart}>
               Ir a la página principal
             </Button>
           </LinkContainer>
@@ -52,7 +61,9 @@ function OrderConfirm() {
         <p>cargando</p>
       )}
     </div>
+  
   );
+  
 }
 
 export default OrderConfirm;

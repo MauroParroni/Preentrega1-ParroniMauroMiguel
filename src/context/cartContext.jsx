@@ -32,7 +32,7 @@ function CartContextProvider(props) {
   }
 
   function clearCart() {
-    return null;
+    setCart([]);
   }
 
   function getTotalItemsInCart() {
