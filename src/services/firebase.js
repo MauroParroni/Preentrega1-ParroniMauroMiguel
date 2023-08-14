@@ -11,9 +11,9 @@ import {
   addDoc
 } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyBTABCKTdnAoJcu91dUZEfUnVSUllMg3iU",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "vapor-f1de9.firebaseapp.com",
-  projectId: "vapor-f1de9",
+  projectId: process.env.REACT_APP_PROYECT_ID,
   storageBucket: "vapor-f1de9.appspot.com",
   messagingSenderId: "583982299358",
   appId: "1:583982299358:web:8ef03388e105372c91aa4f",
