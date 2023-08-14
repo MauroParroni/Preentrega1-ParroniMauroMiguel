@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Ecommerce React Mauro Parroni - Coderhouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Buenas, soy Mauro y este es mi proyecto final para el curso de ReactJS en Coderhouse. Mi proyecto se basa en un ecommerce de venta  de videojuegos basado en la tienda ya existente de steam. Esta echo con mucho esfuerzo y espero que lo disfruten! se aceptan criticas.
 
-## Available Scripts
+## Algunas capturas
 
-In the project directory, you can run:
+![Imagen local](./src/Images/Captura%201.jpg)
 
 ### `npm start`
 

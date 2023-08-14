@@ -23,7 +23,7 @@ function ItemDetailComponent() {
   }
   function handleAddToCart(count){
     addToCart(product,count);
-    MySwal.fire(`Agregaste ${count} de ${product.nombre} al carrito`)
+    MySwal.fire(`Agregaste ${count} ${product.nombre} al carrito`)
     setInCart(true)
   }
   useEffect(() => {
