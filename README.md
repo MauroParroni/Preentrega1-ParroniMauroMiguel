@@ -1,70 +1,34 @@
-# Ecommerce React Mauro Parroni - Coderhouse
+# Ecommerce React Mauro Miguel Parroni - Coderhouse
 
 Buenas, soy Mauro y este es mi proyecto final para el curso de ReactJS en Coderhouse. Mi proyecto se basa en un ecommerce de venta  de videojuegos basado en la tienda ya existente de steam. Esta echo con mucho esfuerzo y espero que lo disfruten! se aceptan criticas.
 
 ## Algunas capturas
 
 ![Imagen local](./src/Images/Captura%201.jpg)
+![Imagen local](./src/Images/Captura%202.jpg)
+![Imagen local](./src/Images/captura%203%20mobile.png)
+![Imagen local](./src/Images/captura%204%20mobile.png)
+![Imagen local](./src/Images/captura%205.png)
+![Imagen local](./src/Images/captura%206.png)
 
-### `npm start`
+### Datos Personales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Estudiante: Mauro Miguel Parroni
+- LinkedIn: https://www.linkedin.com/in/mauro-miguel-parroni-747999205/
+- GitHub: https://github.com/MauroParroni
+- Curso: ReactJS / Coderhouse
+- Comision: 43305
+- Puedes ver el proyecto en Vercel: https://ecommercecoder-beta.vercel.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+- React.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Herramientas utilizadas
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Firestore / Firebase
+- React Bootstrap / React router Bootstrap
+- React router dom
+- SweetAlert2
+- Context
+- React loader spinner
