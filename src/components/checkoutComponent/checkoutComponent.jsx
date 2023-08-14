@@ -35,7 +35,7 @@ function CheckoutComponent(){
         }
         try {
         const idOrder = await createOrder(orderData)
-        MySwal.fire(`Gracias por su compra tu numero de orden es ${idOrder}`)
+        MySwal.fire(`Gracias por su compra ${buyer.firstname} su total es: ${calculateTotal()}$ tu numero de orden es ${idOrder}`)
         navigate (`/order-confirmation/${idOrder}`)
 
     } catch(error){
