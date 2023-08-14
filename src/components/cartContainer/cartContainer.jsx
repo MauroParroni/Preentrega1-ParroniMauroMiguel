@@ -13,7 +13,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 const MySwal = withReactContent(Swal)
 function CartContainer() {
-    const { cart, removeItem } = useContext(cartContext);
+    const { cart, removeItem} = useContext(cartContext);
 
     if (cart.length === 0) {
         return (
@@ -60,7 +60,6 @@ function CartContainer() {
                 </tbody>
             </Table>
             <div className="total-container">
-                <p>Total:</p>
                 <LinkContainer to="/checkout">
         <Button variant="primary" type="submit">
       Comprar

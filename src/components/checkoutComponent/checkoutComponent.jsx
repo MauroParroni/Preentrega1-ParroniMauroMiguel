@@ -66,9 +66,9 @@ function CheckoutComponent(){
         <div className="container form-container">
             <h2 className="Cart">Rellena con tus datos para completar la compra</h2>
     <Form>
-    <InputForm value ={buyer.name} label={"Nombre"} onChange ={onInputChange} name ={"firstname"}/>
-    <InputForm value ={buyer.name} label={"Apellido"} onChange ={onInputChange} name ={"lastname"}/>
-    <InputForm value ={buyer.name} label={"Edad"} onChange ={onInputChange} name ={"age"}/>
+    <InputForm value ={buyer.name} label={"Nombre"} onChange ={onInputChange} name ={"firstname"} type ={"text"}/>
+    <InputForm value ={buyer.name} label={"Apellido"} onChange ={onInputChange} name ={"lastname"} type ={"text"}/>
+    <InputForm value ={buyer.name} label={"Edad"} onChange ={onInputChange} name ={"age"} type ={"number"}/>
     <Button variant="primary" type="submit" onClick={handleCheckout} disabled={!(buyer.firstname!=="" && buyer.lastname!=="" && buyer.age !== "" )}>
         Crear orden
       </Button>
